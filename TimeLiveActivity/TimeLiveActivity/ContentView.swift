@@ -9,20 +9,35 @@ import SwiftUI
 import ActivityKit
 
 struct ContentView: View {
+    static let dateFormatter: DateFormatter = {
+           let formatter = DateFormatter()
+            formatter.dateFormat = "MM/dd/yyyy_HH:mm:ss"
+            return formatter
+        }()
+//    @State private var isTrackingTime = false
+    @State private var startTime: Date? = nil
     @State private var activity: Activity<TimeAttributes>? = nil
+    @State private var alarmTime = dateFormatter.date(from: "\(Date.now.formatted(date: .numeric, time: .omitted))_22:00:00")!
     var body: some View {
         VStack {
+//            if let alarmTime {
+                Text(alarmTime, style: .relative)
+//            }
             Button("start") {
+//                isTrackingTime = true
+//                startTime = .now
                 let attributes = TimeAttributes()
-                let state = TimeAttributes.ContentState(restTime: Date.now)
+                let state = TimeAttributes.ContentState(restTime: alarmTime)
                 
                 activity = try? Activity<TimeAttributes>.request(attributes: attributes, contentState: state, pushType: nil)
             }
             Button("end") {
-                let state = TimeAttributes.ContentState(restTime: Date.now)
+//                guard let startTime else { return }
+                let state = TimeAttributes.ContentState(restTime: alarmTime)
                 Task {
                     await activity?.end(using: state, dismissalPolicy:.immediate)
                 }
+//                self.startTime = nil
             }
         }
         .font(.title)
