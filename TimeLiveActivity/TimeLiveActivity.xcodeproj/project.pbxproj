@@ -11,6 +11,7 @@
 		1B501C4F2BFB320C00A0BB90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B501C4E2BFB320C00A0BB90 /* ContentView.swift */; };
 		1B501C512BFB320D00A0BB90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B501C502BFB320D00A0BB90 /* Assets.xcassets */; };
 		1B501C542BFB320D00A0BB90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B501C532BFB320D00A0BB90 /* Preview Assets.xcassets */; };
+		1BFE74F42BFB37FF00EB532E /* TimeAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFE74F32BFB37FF00EB532E /* TimeAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		1B501C4E2BFB320C00A0BB90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B501C502BFB320D00A0BB90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B501C532BFB320D00A0BB90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1BFE74F32BFB37FF00EB532E /* TimeAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				1B501C4C2BFB320C00A0BB90 /* TimeLiveActivityApp.swift */,
 				1B501C4E2BFB320C00A0BB90 /* ContentView.swift */,
+				1BFE74F32BFB37FF00EB532E /* TimeAttributes.swift */,
 				1B501C502BFB320D00A0BB90 /* Assets.xcassets */,
 				1B501C522BFB320D00A0BB90 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B501C4F2BFB320C00A0BB90 /* ContentView.swift in Sources */,
+				1BFE74F42BFB37FF00EB532E /* TimeAttributes.swift in Sources */,
 				1B501C4D2BFB320C00A0BB90 /* TimeLiveActivityApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
