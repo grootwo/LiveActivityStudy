@@ -35,6 +35,6 @@ struct TimeWidgetView: View {
     let context: ActivityViewContext<TimeAttributes>
     
     var body: some View {
-        Text(context.state.restTime, style: .relative)
+        Text("\(context.state.restTime)")
     }
 }
