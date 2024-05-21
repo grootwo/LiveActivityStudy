@@ -28,13 +28,13 @@ struct ContentView: View {
 //                startTime = .now
                 let attributes = TimeAttributes()
                 let state = TimeAttributes.ContentState(restTime: alarmTime)
-                let content = ActivityContent<TimeAttributes.ContentState>(state: state, staleDate: alarmTime.addingTimeInterval(600)) // 10분 뒤 자동 종료
+                let content = ActivityContent<TimeAttributes.ContentState>(state: state, staleDate: nil)
                 activity = try? Activity<TimeAttributes>.request(attributes: attributes, content: content, pushType: nil)
             }
             Button("end") {
 //                guard let startTime else { return }
                 let state = TimeAttributes.ContentState(restTime: alarmTime)
-                let content = ActivityContent<TimeAttributes.ContentState>(state: state, staleDate: alarmTime.addingTimeInterval(600))
+                let content = ActivityContent<TimeAttributes.ContentState>(state: state, staleDate: alarmTime.addingTimeInterval(10))
                 Task {
                     await activity?.end(content, dismissalPolicy:.immediate)
                 }
