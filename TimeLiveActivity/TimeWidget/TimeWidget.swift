@@ -21,7 +21,7 @@ struct TimeWidget: Widget {
                     Button("click") {}
                 }
             } compactLeading: {
-                Text("CL")
+                Image(systemName: "leaf.fill")
             } compactTrailing: {
                 Text(context.state.restTime, style: .relative)
             } minimal: {
