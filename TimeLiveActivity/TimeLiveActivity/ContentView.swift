@@ -17,7 +17,7 @@ struct ContentView: View {
 //    @State private var isTrackingTime = false
 //    @State private var startTime: Date? = nil
     @State private var activity: Activity<TimeAttributes>? = nil
-    @State private var alarmTime = dateFormatter.date(from: "\(Date.now.formatted(date: .numeric, time: .omitted))_22:00:00")!
+    @State private var alarmTime = dateFormatter.date(from: "\(Date.now.formatted(date: .numeric, time: .omitted))_16:30:00")!
     var body: some View {
         VStack {
 //            if let alarmTime {
